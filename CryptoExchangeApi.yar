@@ -1,9 +1,10 @@
 rule CryptoExchangeApi
 {
- 	meta:
+    meta:
         description = "Contains Crypro Exchange API URL"
         author = "Jason Schorr (0xBanana)"
     strings:
+    		$a = "api.binance.com" nocase wide ascii
 		$a0 = "1btcxe.com/api" nocase wide ascii
 		$a1 = "acx.io/api" nocase wide ascii
 		$a2 = "anxpro.com/api" nocase wide ascii
@@ -79,7 +80,7 @@ rule CryptoExchangeApi
 		$bb = "api.vaultoro.com" nocase wide ascii
 		$bc = "cryptottlivewebapi.xbtce.net:8443/api" nocase wide ascii
 		$bd = "yunbi.com" nocase wide ascii
-		$be = "api.zaif.jp"" nocase wide ascii
+		$be = "api.zaif.jp" nocase wide ascii
 
     condition:
        any of them
